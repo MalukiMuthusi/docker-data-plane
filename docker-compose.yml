@@ -1,0 +1,14 @@
+services:
+  worker-manager:
+    image: ghcr.io/agentifyme/worker-manager:0.1
+    container_name: agnt5-worker-manager
+    pull_policy: always
+    restart: unless-stopped
+    command: ["/app/main"]
+    env_file:
+      - .env
+    environment:
+      - SERVICE_NAME=agentifyme-worker-manager
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config.toml:/etc/agentifyme/config.toml

@@ -1,0 +1,20 @@
+# Host name for the data plane agent
+# Format: string
+# Example: "agnt5-data-plane"
+host_name = "agnt5-data-plane"
+
+# Infrastructure deployment type
+# Possible values: "onprem", "managed"
+# Default: "onprem"
+infra_type = "onprem"
+
+# Infrastructure environment name
+# Used to distinguish between different deployment environments
+# Default: "default"
+infra_env = "default"
+
+# Labels section for agent configuration
+[labels]
+# Type of agent being deployed
+# Possible values: "data-plane", "control-plane"
+agent_type = "data-plane"

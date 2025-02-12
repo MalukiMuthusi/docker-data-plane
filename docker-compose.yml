@@ -11,4 +11,4 @@ services:
       - SERVICE_NAME=agentifyme-worker-manager
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./config.toml:/etc/agentifyme/config.toml
+      - ./config.toml:/etc/agentifyme/nodemanager.toml
